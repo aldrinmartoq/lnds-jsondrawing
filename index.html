@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<HTML>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>JSONDrawing</title>
+    <script src="amartoq.js"></script>
+<style type="text/css">
+html, body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+  height: 100%;
+}
+a {
+  color: white;
+}
+.coder {
+  float: right;
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  right: 0px;
+  color: white;
+  background-color: gray;
+  opacity: 0.9;
+  z-index: 20;
+}
+canvas {
+  position: absolute;
+  top: 50%;
+  height: 480px;
+  margin-top: -240px;
+  margin-left: 10px;
+  border: 2px dashed black;
+}
+textarea, body, input[type=button] {
+  font-family: 'Consolas';
+}
+textarea {
+  width: 100%;
+  height: 70%;
+  font-size: 12px;
+}
+</style>
+<script type="text/javascript">
+window.onload = function () {
+  var canvas = document.querySelector('canvas');
+  var textarea = document.querySelector('textarea');
+  document.querySelector('input').onclick = function() {
+    JSONDrawing(canvas, textarea.value);
+  }
+  JSONDrawing(canvas, "[{ background : 'black', pen : 'white', fill: 'none' }]");
+}
+</script>
+  </head>
+  <body>
+    <div class="coder">
+      <center>
+        <h1>JSONDrawing</h1>
+        <legend>por <a href="http://twitter.com/aldrinmartoq">@aldrinmartoq</a></legend>
+        <p><a href="http://github.com/aldrinmartoq/lnds-jsondrawing/">código en github</a></p>
+        <p><a href="http://programando.org/blog/2013/09/desafio-startechconf-2013/">desafío startechconf 2013</a></p>
+      </center>
+      <textarea>
+[ { width : 10,
+     line : [250, 80, 430, 80] },
+  {  line : [280, 80, 280, 160] },
+  {  line : [330, 80, 330, 160] },
+  {  line : [330, 155, 370, 155] },
+  {  line : [330, 115, 370, 115] },
+  {  line : [390, 80, 390, 160] },
+  {  line : [390, 155, 430, 155] },
+  {  line : [440, 75, 440, 160] },
+  {  line : [480, 75, 480, 160] },
+  {  line : [440, 115, 480, 115] },
+  { width : 10,
+      pen : 'yellow' },
+  {  line : [100,  50,  90, 100] },  
+  {  line : [ 90, 100,  40, 100] },
+  {  line : [ 40, 100,  84, 130] },
+  {  line : [ 84, 130,  74, 180] },
+  {  line : [120, 100,  170, 100],
+      pen : 'lightgray' },
+  {  line : [128, 130,  140, 180] },
+  {  fill : 'lightblue',
+      pen : 'green',
+    width : 2,
+   circle : [400, 250, 40] }, 
+  {   pen : 'red',
+      box : [300, 220, 350, 280] },
+  {  fill : 0xcafece,
+   circle : [200, 250, 40] },
+  {  fill : 'black',
+     pen  : 'black',
+   circle : [220, 250, 35] },
+  {   box : [390, 230, 440, 240] },
+  {   box : [310, 230, 320, 280] },
+  {   box : [340, 220, 330, 270] },
+  {   box : [390, 250, 440, 290] },
+  {  fill : 'green',
+    width : 5,
+     pen  : 'yellow',
+   circle : [250, 250, 30] },  
+]
+</textarea>
+    <input type="button" value="JSONDrawing">
+    </div>
+    <div>
+      <canvas style="" width="640" height="480"/>
+    </div>
+</body>
+</HTML>
