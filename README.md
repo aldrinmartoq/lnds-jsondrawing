@@ -3,11 +3,11 @@ Desafío StarTechConf 2013
 
 Concurso:
 
-    http://www.programando.org/blog/2013/09/desafio-startechconf-2013/
+  http://www.programando.org/blog/2013/09/desafio-startechconf-2013/
 
 Probar en esta dirección:
 
-    http://aldrinmartoq.github.io/lnds-jsondrawing/
+  http://aldrinmartoq.github.io/lnds-jsondrawing/
 
 Una gracia de esta implementación es que es fácil agregar nuevas operaciones, para soportar por ejemplo `{'triangle' : [1, 2, 3] }` basta implementar `JSONDrawing.triangle = function(ctx, args) { /* triangle code */}`.
 
