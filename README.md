@@ -9,32 +9,21 @@ Probar en esta dirección:
 
   http://aldrinmartoq.github.io/lnds-jsondrawing/
 
-Una gracia de esta implementación es que es fácil agregar nuevas operaciones, para soportar por ejemplo `{'triangle' : [1, 2, 3] }` basta implementar `JSONDrawing.triangle = function(ctx, args) { /* triangle code */}`.
+Una gracia de esta implementación es que es fácil agregar nuevas operaciones. Por ejemplo, para soportar `{'triangle' : [1, 2, 3] }` basta implementar `JSONDrawing.triangle = function(ctx, args) { /* código que dibuja un triángulo */ }`.
 
 Métricas:
 
-    Halstead effort (Total): 3562.29.
-    Halstead T: 197.905
+    $ bin/halstead amartoq.js
+    amartoq.js Total Halstead Effort: 1941.93 T: 107.885
 
-    $ cr .
-    lnds-jsondrawing/amartoq.js
+    $ cr amartoq.js
 
-    Maintainability index: 140.4471640211928
-    Aggregate cyclomatic complexity: 4
-    Mean parameter count: 1.9
-
-    Function: JSONDrawing_draw
-      Line No.: 1
-      Physical SLOC: 11
-      Logical SLOC: 9
-      Parameter count: 2
-      Cyclomatic complexity: 2
-      Halstead difficulty: 10.384615384615385
-      Halstead volume: 226.17809780285066
-      Halstead effort: 2348.772554106526
+    Maintainability index: 146.21590124061322
+    Aggregate cyclomatic complexity: 3
+    Mean parameter count: 1.8181818181818181
 
     Function: JSONDrawing
-      Line No.: 12
+      Line No.: 1
       Physical SLOC: 3
       Logical SLOC: 1
       Parameter count: 2
@@ -43,8 +32,28 @@ Métricas:
       Halstead volume: 36
       Halstead effort: 48
 
+    Function: JSONDrawing_draw
+      Line No.: 4
+      Physical SLOC: 10
+      Logical SLOC: 1
+      Parameter count: 2
+      Cyclomatic complexity: 1
+      Halstead difficulty: 1.875
+      Halstead volume: 22.458839376460833
+      Halstead effort: 42.11032383086406
+
+    Function: <anonymous>
+      Line No.: 5
+      Physical SLOC: 8
+      Logical SLOC: 6
+      Parameter count: 1
+      Cyclomatic complexity: 1
+      Halstead difficulty: 5.666666666666666
+      Halstead volume: 121.11360846386408
+      Halstead effort: 686.3104479618964
+
     Function: JSONDrawing_color
-      Line No.: 15
+      Line No.: 14
       Physical SLOC: 3
       Logical SLOC: 1
       Parameter count: 1
@@ -54,7 +63,7 @@ Métricas:
       Halstead effort: 301.1368500605772
 
     Function: JSONDrawing.background
-      Line No.: 18
+      Line No.: 17
       Physical SLOC: 3
       Logical SLOC: 1
       Parameter count: 2
@@ -64,7 +73,7 @@ Métricas:
       Halstead effort: 82.41805003750012
 
     Function: JSONDrawing.circle
-      Line No.: 21
+      Line No.: 20
       Physical SLOC: 3
       Logical SLOC: 1
       Parameter count: 2
@@ -74,7 +83,7 @@ Métricas:
       Halstead effort: 92.38067147060454
 
     Function: JSONDrawing.box
-      Line No.: 24
+      Line No.: 23
       Physical SLOC: 3
       Logical SLOC: 1
       Parameter count: 2
@@ -84,7 +93,7 @@ Métricas:
       Halstead effort: 296.12616160138776
 
     Function: JSONDrawing.line
-      Line No.: 27
+      Line No.: 26
       Physical SLOC: 4
       Logical SLOC: 2
       Parameter count: 2
@@ -94,7 +103,7 @@ Métricas:
       Halstead effort: 127.89423165316344
 
     Function: JSONDrawing.pen
-      Line No.: 31
+      Line No.: 30
       Physical SLOC: 3
       Logical SLOC: 1
       Parameter count: 2
@@ -104,7 +113,7 @@ Métricas:
       Halstead effort: 56.848937171666485
 
     Function: JSONDrawing.width
-      Line No.: 34
+      Line No.: 33
       Physical SLOC: 3
       Logical SLOC: 1
       Parameter count: 2
@@ -114,7 +123,7 @@ Métricas:
       Halstead effort: 27.089161107019226
 
     Function: JSONDrawing.fill
-      Line No.: 37
+      Line No.: 36
       Physical SLOC: 3
       Logical SLOC: 1
       Parameter count: 2

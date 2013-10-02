@@ -41,12 +41,29 @@ textarea {
   height: 70%;
   font-size: 12px;
 }
+.likeabutton {
+  width: 80%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block; padding: 2px 8px;
+  color: black;
+  border: 1px solid black;
+  background: -webkit-gradient(linear, left top, left bottom, from(#00EEEE), to(#00FFFF));
+}
+.likeabutton:hover {
+  color: white;
+  cursor: pointer;
+  background: -webkit-gradient(linear, left top, left bottom, from(#00CCCC), to(#00FFFF));
+}
+.likeabutton:active {
+/*  border-color: ButtonShadow ButtonHighlight ButtonHighlight ButtonShadow;*/
+}
 </style>
 <script type="text/javascript">
 window.onload = function () {
   var canvas = document.querySelector('canvas');
   var textarea = document.querySelector('textarea');
-  document.querySelector('input').onclick = function() {
+  document.querySelector('.likeabutton').onclick = function() {
     JSONDrawing(canvas, textarea.value);
   }
   JSONDrawing(canvas, "[{ background : 'black', pen : 'white', fill: 'none' }]");
@@ -60,6 +77,7 @@ window.onload = function () {
         <legend>por <a href="http://twitter.com/aldrinmartoq">@aldrinmartoq</a></legend>
         <p><a href="http://github.com/aldrinmartoq/lnds-jsondrawing/">código en github</a></p>
         <p><a href="http://programando.org/blog/2013/09/desafio-startechconf-2013/">desafío startechconf 2013</a></p>
+        <p><a class="likeabutton">Dibujar</a></p>
       </center>
       <textarea>
 [ { width : 10,
@@ -103,7 +121,6 @@ window.onload = function () {
    circle : [250, 250, 30] },  
 ]
 </textarea>
-    <input type="button" value="JSONDrawing">
     </div>
     <div>
       <canvas style="" width="640" height="480"/>

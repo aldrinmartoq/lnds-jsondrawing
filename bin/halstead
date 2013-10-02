@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for i in $*; do
+	echo $i $(cr $i | grep effort | awk '{SUM += $3} END { print "Total Halstead Effort: " SUM " T: " SUM/18 }')
+done
+

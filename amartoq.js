@@ -1,17 +1,16 @@
-var JSONDrawing_draw = function(json, ctx) {
-  for (var i = 0; i < json.length; i++) {
+var JSONDrawing = function(cnv, json) {
+  JSONDrawing_draw(cnv.getContext('2d'), eval(json));
+}
+var JSONDrawing_draw = function(ctx, json) {
+  json.forEach(function(item) {
     ctx.beginPath();
-    var x = json[i];
-    for (var m in x) {      
-      JSONDrawing[m](ctx, x[m]);
+    for (var prop in item) {      
+      JSONDrawing[prop](ctx, item[prop]);
     }
     ctx.fillStyle != 'rgba(0, 0, 0, 0)' && ctx.fill();
     ctx.stroke();
-  }    
+  });
 };
-var JSONDrawing = function(cnv, json) {
-  JSONDrawing_draw(eval(json), cnv.getContext('2d'));
-}
 var JSONDrawing_color = function(args) {
   return typeof args == 'number' ? '#' + args.toString(16) : args;
 };
